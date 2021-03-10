@@ -5,6 +5,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
 RUN apt-get -y install git make vim g++ gcc autoconf automake libtool libudev-dev libgcrypt-dev libcap-ng-dev libseccomp-dev uthash-dev python3-dev librpm-dev libmagic-dev liblmdb-dev
 
+COPY fapolicyd.conf /etc/fapolicyd/fapolicyd.conf
+COPY fapolicyd.rules /etc/fapolicyd/fapolicyd.rules
+COPY fapolicyd.trust /etc/fapolicyd/fapolicyd.trust
 COPY run.sh /scripts/run.sh
 
 CMD /scripts/run.sh
