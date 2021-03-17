@@ -1,5 +1,5 @@
 cd /fapolicyd
-git clone https://github.com/linux-application-whitelisting/fapolicyd.git
+git clone https://github.com/wanyaworld/fapolicyd.git
 cd fapolicyd
 ./autogen.sh
 ./configure --with-audit --disable-shared
